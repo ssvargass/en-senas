@@ -1,5 +1,0 @@
-[run]
-include = learn/*
-omit = *migrations*, *tests*
-plugins =
-    django_coverage_plugin
