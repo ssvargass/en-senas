@@ -23,7 +23,7 @@ FLAGS = tf.app.flags.FLAGS
 # Start a socket listening for connections on 0.0.0.0:8000 (0.0.0.0 means
 # all interfaces)
 server_socket = socket.socket()
-server_socket.bind(('192.168.0.12', 8080))
+server_socket.bind(('en-senas.org', 8080))
 server_socket.listen(5)
 
 # Accept a single connection and make a file-like object out of it
@@ -32,7 +32,7 @@ server_socket.listen(5)
 
 
 tf.app.flags.DEFINE_string(
-    'model_dir', '/Users/sergiovargas/Estudios/AI/learn/raspberrypi',
+    'model_dir', '/home/svargas/en-senas/raspberrypi',
     """Path to classify_image_graph_def.pb, """
     """imagenet_synset_to_human_label_map.txt, and """
     """imagenet_2012_challenge_label_map_proto.pbtxt.""")
@@ -155,7 +155,7 @@ while 1:
           #print('%s (score = %.5f)' % (human_string, score))
 
         djangotext = ','.join(human_string)
-        r = rq.get('http://127.0.0.1:8000/words?tag=' + djangotext)
+        r = rq.get('http://en-senas.org/words?tag=' + djangotext)
         if(r.status_code == 200):
             dictionary = json.loads(r.text)
             print(len(dictionary))
