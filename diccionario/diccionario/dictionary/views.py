@@ -16,7 +16,6 @@ class WordView(generics.ListAPIView):
         tag = self.request.GET.get('tag', None)
         if tag is not None:
             tags = tag.split(',')
-            print tags
             queryset = queryset.filter(tags__name__in=tags).distinct()
 
         return queryset
