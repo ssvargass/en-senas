@@ -1,5 +1,0 @@
-[run]
-include = dictionary/*
-omit = *migrations*, *tests*
-plugins =
-    django_coverage_plugin
