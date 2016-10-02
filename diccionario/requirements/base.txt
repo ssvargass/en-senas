@@ -47,3 +47,9 @@ redis>=2.10.0
 
 # Your custom requirements go here
 djangorestframework==3.4.6
+markdown==2.6.6
+pyuploadcare==2.0
+django-taggit_autosuggest==0.2.8
+django-taggit==0.18.1
+django-tinymce==2.3.0
+django-taggit-serializer==0.1.5

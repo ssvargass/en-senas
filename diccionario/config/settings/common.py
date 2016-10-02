@@ -40,6 +40,10 @@ THIRD_PARTY_APPS = (
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     'rest_framework',
+    'taggit',
+    'taggit_autosuggest',
+    'pyuploadcare.dj',
+    'taggit_serializer'
 )
 
 # Apps specific for this project go here.
@@ -48,6 +52,7 @@ LOCAL_APPS = (
     'diccionario.users.apps.UsersConfig',
     # Your stuff: custom apps go here
     'diccionario.quickstart',
+    'diccionario.dictionary',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -251,4 +256,10 @@ CORS_ALLOW_METHODS = (
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
     'PAGE_SIZE': 10
+}
+
+
+UPLOADCARE = {
+   'pub_key': '26ce3fdf0d2c8cacc9fa',
+   'secret': '2fd7e8536944f30c97f1',
 }

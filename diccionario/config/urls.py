@@ -8,11 +8,12 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from rest_framework import routers
-from diccionario.quickstart import views
+from diccionario.quickstart import views as UserView
+from diccionario.dictionary import views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'users', UserView.UserViewSet)
+router.register(r'groups', UserView.GroupViewSet)
 
 
 urlpatterns = [
@@ -31,6 +32,8 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     # Your stuff: custom urls includes go here
+    url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
+    url(r'^words/$', views.WordView.as_view(), name='word-list'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
