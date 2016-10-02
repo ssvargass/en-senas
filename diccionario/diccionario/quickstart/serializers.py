@@ -1,6 +1,6 @@
 from django.contrib.auth.models import Group
 from rest_framework import serializers
-from site_factory.users.models import User
+from diccionario.users.models import User
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

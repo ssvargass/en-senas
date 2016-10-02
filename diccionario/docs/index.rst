@@ -1,9 +1,9 @@
-.. Site Factory documentation master file, created by
+.. En-Señas | Diccionario documentation master file, created by
    sphinx-quickstart.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Site Factory's documentation!
+Welcome to En-Se\xc3\xb1as | Diccionario's documentation!
 ====================================================================
 
 Contents:

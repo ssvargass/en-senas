@@ -1,7 +1,7 @@
-Site Factory
+En-Señas | Diccionario
 ============
 
-This project contains functionality for the site factory
+This project contains functionality for the En-Se\xc3\xb1as | Diccionario
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/

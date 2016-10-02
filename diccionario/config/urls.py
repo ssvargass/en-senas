@@ -8,7 +8,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from rest_framework import routers
-from site_factory.quickstart import views
+from diccionario.quickstart import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -23,7 +23,7 @@ urlpatterns = [
     url(settings.ADMIN_URL, include(admin.site.urls)),
 
     # User management
-    url(r'^users/', include('site_factory.users.urls', namespace='users')),
+    url(r'^users/', include('diccionario.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
 
     # Rest urls

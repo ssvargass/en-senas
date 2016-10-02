@@ -1,7 +1,7 @@
 from django.contrib.auth.models import Group
-from site_factory.users.models import User
+from diccionario.users.models import User
 from rest_framework import viewsets
-from site_factory.quickstart.serializers import UserSerializer, GroupSerializer
+from diccionario.quickstart.serializers import UserSerializer, GroupSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
