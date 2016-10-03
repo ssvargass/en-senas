@@ -1,14 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Workouts</ion-title>
+    <ion-title>En señas</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card>
     <ion-card-content>
-      Hello World, this is my camera app
-      <button (click)="takePicture()">Take a Picture</button>
+      <ion-col (click)="takePicture()"><ion-icon name="camera"></ion-icon></ion-col>  
+
       <button (click)="openGallery()">Choose a Photo</button>
       Latest Picture:
       <div *ngIf="imageSrc">

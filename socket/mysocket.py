@@ -16,6 +16,7 @@ import eventlet
 from flask import Flask, render_template
 
 from PIL import Image
+import requests as rq
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -143,7 +144,7 @@ def run_inference_on_image(image):
 
         top_k = predictions.argsort()[-FLAGS.num_top_predictions:][::-1]
         human_string = []
-	print(top_k)
+	    print(top_k)
         for node_id in top_k:
             text = node_lookup.id_to_string(node_id)
             text = re.split('\W+', text)
@@ -188,7 +189,23 @@ def connect(sid, environ):
 @sio.on('my message')
 def message(sid, data):
     human = run_inference_on_image(data)
-    return human, 123
+    r = rq.get('http://en-senas.org/words?tag=' + djangotext)
+    if(r.status_code == 200):
+        dictionary = json.loads(r.text)
+        print(dictionary)
+        if(dictionary['count'] == 0):
+            tpm_dict = {
+                'image': '',
+                'title': 'No tenemos resultados'
+            }
+            dictionary['results'].append(tpm_dict)
+        return str(dictionary['results'][0]), 123
+    else:
+        tpm_dict = {
+                  'image': '',
+                  'title': 'No tenemos resultados'
+              }
+        return str(tpm_dict), 123
 
 @sio.on('disconnect')
 def disconnect(sid):

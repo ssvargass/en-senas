@@ -153,7 +153,7 @@ while 1:
           #print('%s (score = %.5f)' % (human_string, score))
 
         djangotext = ','.join(human_string)
-	print(djangotext)
+	
         r = rq.get('http://en-senas.org/words?tag=' + djangotext)
         if(r.status_code == 200):
             dictionary = json.loads(r.text)
@@ -165,11 +165,11 @@ while 1:
                 }
                 dictionary['results'].append(tpm_dict)
             conn.send(str(dictionary['results'][0]))
-	    conn.close()
-	else:
-	    tpm_dict = {
-                'image': '',
-                'title': 'No tenemos resultados'
-            }
-	    conn.send(str(tpm_dict))
-	    conn.close()
+      	    conn.close()
+      	else:
+      	    tpm_dict = {
+                      'image': '',
+                      'title': 'No tenemos resultados'
+                  }
+      	    conn.send(str(tpm_dict))
+      	    conn.close()

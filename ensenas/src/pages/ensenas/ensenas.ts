@@ -4,11 +4,11 @@ import { NavController } from 'ionic-angular';
 import * as io from "socket.io-client";
 
 @Component({
-  selector: 'page-workouts',
-  templateUrl: 'workouts.html'
+  selector: 'page-ensenas',
+  templateUrl: 'ensenas.html'
 })
 
-export class WorkoutsPage {
+export class EnsenasPage {
   imageSrc: string;
   socketHost: string = 'http://104.236.17.92:8000/'; 
   socket: any;
