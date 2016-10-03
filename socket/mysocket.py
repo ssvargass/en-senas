@@ -26,7 +26,7 @@ FLAGS = tf.app.flags.FLAGS
 # imagenet_2012_challenge_label_map_proto.pbtxt:
 #   Text representation of a protocol buffer mapping a label to synset ID.
 tf.app.flags.DEFINE_string(
-    'model_dir', '/Users/sergiovargas/Estudios/AI/learn/raspberrypi',
+    'model_dir', '/home/svargas/en-senas/raspberrypi',
     """Path to classify_image_graph_def.pb, """
     """imagenet_synset_to_human_label_map.txt, and """
     """imagenet_2012_challenge_label_map_proto.pbtxt.""")
@@ -121,10 +121,11 @@ def run_inference_on_image(image):
     # image_data = tf.gfile.FastGFile(image, 'rb').read()
     image_data = re.sub('^data:image/.+;base64,', '', image).decode('base64')
     # Creates graph from saved GraphDef.
-    create_graph()
-
+#    create_graph()
+#    return "aaaa"
+#    gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
     with tf.Session() as sess:
-        # Some useful tensors:
+    	# Some useful tensors:
         # 'softmax:0': A tensor containing the normalized prediction across
         #   1000 labels.
         # 'pool_3:0': A tensor containing the next-to-last layer containing 2048
@@ -142,11 +143,13 @@ def run_inference_on_image(image):
 
         top_k = predictions.argsort()[-FLAGS.num_top_predictions:][::-1]
         human_string = []
+	print(top_k)
         for node_id in top_k:
             text = node_lookup.id_to_string(node_id)
             text = re.split('\W+', text)
             human_string += text
-        return human_string
+    	sess.close()
+    	return human_string
 
 
 def maybe_download_and_extract():
@@ -193,9 +196,9 @@ def disconnect(sid):
 
 if __name__ == '__main__':
     maybe_download_and_extract()
-
+    create_graph()
     # wrap Flask application with socketio's middleware
     app = socketio.Middleware(sio, app)
 
     # deploy as an eventlet WSGI server
-    eventlet.wsgi.server(eventlet.listen(('192.168.8.148', 8000)), app)
+    eventlet.wsgi.server(eventlet.listen(('104.236.17.92', 8000)), app)

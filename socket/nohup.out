@@ -1,0 +1,45 @@
+(3388) wsgi starting up on http://104.236.17.92:8000
+(3388) accepted ('190.242.99.252', 10124)
+190.242.99.252 - - [03/Oct/2016 13:04:28] "GET /socket.io/?EIO=3&transport=polling&t=LUAfKQP HTTP/1.1" 200 381 0.000673
+(3388) accepted ('190.242.99.252', 48562)
+(3388) accepted ('190.242.99.252', 53871)
+190.242.99.252 - - [03/Oct/2016 13:04:29] "GET /socket.io/?EIO=3&transport=polling&t=LUAfKo3&sid=048352acf0454e0e9ce174c320634ff3 HTTP/1.1" 200 215 0.000361
+W tensorflow/core/framework/op_def_util.cc:332] Op BatchNormWithGlobalNormalization is deprecated. It will cease to work in GraphDef version 9. Use tf.nn.batch_normalization().
+190.242.99.252 - - [03/Oct/2016 13:04:33] "POST /socket.io/?EIO=3&transport=polling&t=LUAfKmh&sid=048352acf0454e0e9ce174c320634ff3 HTTP/1.1" 200 205 4.022180
+(3388) accepted ('186.31.221.200', 2183)
+186.31.221.200 - - [03/Oct/2016 13:07:30] "GET /socket.io/?EIO=3&transport=polling&t=LUAg0oY HTTP/1.1" 200 381 0.001209
+(3388) accepted ('186.31.221.200', 2184)
+186.31.221.200 - - [03/Oct/2016 13:07:30] "GET /socket.io/?EIO=3&transport=polling&t=LUAg0zT&sid=ed545e444c9542c88990eb2d1227de1b HTTP/1.1" 200 215 0.305906
+(3388) accepted ('190.242.99.252', 49900)
+190.242.99.252 - - [03/Oct/2016 13:08:11] "GET /socket.io/?EIO=3&transport=polling&t=LUAgB0z HTTP/1.1" 200 381 0.000749
+(3388) accepted ('190.242.99.252', 24117)
+190.242.99.252 - - [03/Oct/2016 13:08:12] "GET /socket.io/?EIO=3&transport=polling&t=LUAgB52&sid=dd4d6c551b81463a89f636e5c4d8bbfc HTTP/1.1" 200 215 0.153442
+(3388) accepted ('190.242.99.252', 51456)
+190.242.99.252 - - [03/Oct/2016 13:08:23] "GET /socket.io/?EIO=3&transport=polling&t=LUAgDyF HTTP/1.1" 200 381 0.000739
+(3388) accepted ('190.242.99.252', 19724)
+190.242.99.252 - - [03/Oct/2016 13:08:23] "GET /socket.io/?EIO=3&transport=polling&t=LUAgE03&sid=0917d232764046db97a484f04dd04e0f HTTP/1.1" 200 215 0.174737
+190.242.99.252 - - [03/Oct/2016 13:09:12] "GET /socket.io/?EIO=3&transport=polling&t=LUAgB9A&sid=dd4d6c551b81463a89f636e5c4d8bbfc HTTP/1.1" 400 218 60.000739
+190.242.99.252 - - [03/Oct/2016 13:09:24] "GET /socket.io/?EIO=3&transport=polling&t=LUAgE4R&sid=0917d232764046db97a484f04dd04e0f HTTP/1.1" 400 218 60.001323
+190.242.99.252 - - [03/Oct/2016 13:09:24] "GET /socket.io/?EIO=3&transport=websocket&sid=0917d232764046db97a484f04dd04e0f HTTP/1.1" 200 0 60.695775
+190.242.99.252 - - [03/Oct/2016 13:09:26] "GET /socket.io/?EIO=3&transport=polling&t=LUAgTD5 HTTP/1.1" 200 381 0.001121
+(3388) accepted ('190.242.99.252', 26137)
+190.242.99.252 - - [03/Oct/2016 13:09:26] "GET /socket.io/?EIO=3&transport=polling&t=LUAgTGS&sid=91c206724aa147a697b1aa6fe2caea5b HTTP/1.1" 200 215 0.160277
+(3388) accepted ('190.242.99.252', 11693)
+190.242.99.252 - - [03/Oct/2016 13:10:15] "GET /socket.io/?EIO=3&transport=polling&t=LUAgfF8 HTTP/1.1" 200 381 0.003242
+(3388) accepted ('190.242.99.252', 8621)
+190.242.99.252 - - [03/Oct/2016 13:10:15] "GET /socket.io/?EIO=3&transport=polling&t=LUAgfKC&sid=ac1d8fe76a9045dd92931215ea9a396d HTTP/1.1" 200 215 0.168546
+190.242.99.252 - - [03/Oct/2016 13:11:15] "GET /socket.io/?EIO=3&transport=polling&t=LUAgfOJ&sid=ac1d8fe76a9045dd92931215ea9a396d HTTP/1.1" 400 218 60.001732
+190.242.99.252 - - [03/Oct/2016 13:11:16] "GET /socket.io/?EIO=3&transport=websocket&sid=ac1d8fe76a9045dd92931215ea9a396d HTTP/1.1" 200 0 60.650479
+190.242.99.252 - - [03/Oct/2016 13:11:18] "GET /socket.io/?EIO=3&transport=polling&t=LUAgudh HTTP/1.1" 200 381 0.000739
+(3388) accepted ('190.242.99.252', 21820)
+190.242.99.252 - - [03/Oct/2016 13:11:19] "GET /socket.io/?EIO=3&transport=polling&t=LUAguia&sid=f7ec4add5fa24592a516b79d6248ba9e HTTP/1.1" 200 215 0.307887
+190.242.99.252 - - [03/Oct/2016 13:12:19] "GET /socket.io/?EIO=3&transport=websocket&sid=f7ec4add5fa24592a516b79d6248ba9e HTTP/1.1" 200 0 60.788915
+(3388) accepted ('190.242.99.252', 49203)
+190.242.99.252 - - [03/Oct/2016 13:13:02] "GET /socket.io/?EIO=3&transport=polling&t=LUAhI29 HTTP/1.1" 200 381 0.000735
+(3388) accepted ('190.242.99.252', 8337)
+190.242.99.252 - - [03/Oct/2016 13:13:02] "GET /socket.io/?EIO=3&transport=polling&t=LUAhI6S&sid=8e1981e9e4094096ae38022612f3bc11 HTTP/1.1" 200 215 0.149399
+190.242.99.252 - - [03/Oct/2016 13:14:03] "GET /socket.io/?EIO=3&transport=polling&t=LUAhIAb&sid=8e1981e9e4094096ae38022612f3bc11 HTTP/1.1" 400 218 60.000901
+190.242.99.252 - - [03/Oct/2016 13:14:03] "GET /socket.io/?EIO=3&transport=websocket&sid=8e1981e9e4094096ae38022612f3bc11 HTTP/1.1" 200 0 60.370778
+190.242.99.252 - - [03/Oct/2016 13:14:04] "GET /socket.io/?EIO=3&transport=polling&t=LUAhX5F HTTP/1.1" 200 381 0.000700
+(3388) accepted ('190.242.99.252', 11078)
+190.242.99.252 - - [03/Oct/2016 13:14:04] "GET /socket.io/?EIO=3&transport=polling&t=LUAhX86&sid=dbbe09a34e5e41439244e55c7820952b HTTP/1.1" 200 215 0.182391
