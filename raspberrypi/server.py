@@ -115,7 +115,6 @@ def create_graph():
 while 1:
     (conn, addr) = server_socket.accept()
     connection = conn.makefile('rb')
-    print(connection)
     image_len = struct.unpack('<L', connection.read(struct.calcsize('<L')))[0]
     image_stream = io.BytesIO()
     image_stream.write(connection.read(image_len))

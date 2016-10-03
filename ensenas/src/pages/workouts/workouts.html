@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Workouts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      Hello World, this is my camera app
+      <button (click)="takePicture()">Take a Picture</button>
+      <button (click)="openGallery()">Choose a Photo</button>
+      Latest Picture:
+      <div *ngIf="imageSrc">
+        <img [src]="imageSrc"/>
+      </div>
+      <div *ngIf="result">{{result}}</div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
