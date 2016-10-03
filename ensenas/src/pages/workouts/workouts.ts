@@ -10,7 +10,7 @@ import * as io from "socket.io-client";
 
 export class WorkoutsPage {
   imageSrc: string;
-  socketHost: string = 'http://192.168.0.18:8000/'; 
+  socketHost: string = 'http://104.236.17.92:8000/'; 
   socket: any;
   zone: any;
   result: string;
@@ -18,7 +18,6 @@ export class WorkoutsPage {
   constructor(public navCtrl: NavController) { 
     this.zone = new NgZone({enableLongStackTrace: false});
     this.socket = io.connect(this.socketHost);
-    this.socket.emit('my message', 'something', (data => this.result = data)); 
   }
 
   openGallery(){
