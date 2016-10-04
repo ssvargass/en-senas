@@ -146,8 +146,8 @@ while 1:
         top_k = predictions.argsort()[-FLAGS.num_top_predictions:][::-1]
         human_string = []
         for node_id in top_k:
-          text = node_lookup.id_to_string(node_id)
-          text = re.split('\W+', text)
+          
+          
           human_string += text
           #score = predictions[node_id]
           #print('%s (score = %.5f)' % (human_string, score))

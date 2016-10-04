@@ -14,7 +14,13 @@
       <div *ngIf="imageSrc">
         <img [src]="imageSrc"/>
       </div>
-      <div *ngIf="result">{{result}}</div>
+      <div *ngIf="results">
+        <ion-list>
+          <ion-item *ngFor="let result of results">
+            {{result.human_string}}
+          </ion-item>
+        </ion-list>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>

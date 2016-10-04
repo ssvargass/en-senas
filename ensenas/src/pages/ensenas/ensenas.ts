@@ -13,7 +13,7 @@ export class EnsenasPage {
   socketHost: string = 'http://104.236.17.92:8000/'; 
   socket: any;
   zone: any;
-  result: string;
+  results: any;
   
   constructor(public navCtrl: NavController) { 
     this.zone = new NgZone({enableLongStackTrace: false});
@@ -51,7 +51,9 @@ export class EnsenasPage {
 
   processImage(imageData){
     this.imageSrc = "data:image/jpeg;base64," + imageData;
-    this.socket.emit('my message', imageData, (data => this.result = data));
+    this.socket.emit('my message', imageData, ((data) => {
+      this.results = eval(data);
+    }));
   }
 
 
