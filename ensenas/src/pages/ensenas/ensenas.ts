@@ -1,3 +1,4 @@
+/// <reference path="../../../typings/globals/socket.io-client/index.d.ts" />
 import { Component,NgZone } from '@angular/core';
 import { Camera } from 'ionic-native';
 import { NavController } from 'ionic-angular';
