@@ -142,15 +142,29 @@ def run_inference_on_image(image):
 
         top_k = predictions.argsort()[-FLAGS.num_top_predictions:][::-1]
         
-        bread = []
+        human_string = []
         for node_id in top_k:
-            resoult = {
-                'human_string' : node_lookup.id_to_string(node_id),
-                'score' : predictions[node_id]    
-            }
-            bread.append(resoult)
-
-        return bread
+	     text = node_lookup.id_to_string(node_id)
+	     text = text.split(' ')
+	     human_string += text
+	djangotext = ','.join(human_string)
+	r = rq.get('http://en-senas.org/words?tag=' + djangotext)
+	if(r.status_code == 200):
+		dictionary = json.loads(r.text)
+		print(dictionary)
+		if(dictionary['count'] == 0):
+                	tpm_dict = {
+                    		'image': '',
+                   		'title': 'No tenemos resultados'
+                	}
+                	dictionary['results'].append(tpm_dict)
+        	return dictionary
+	else:
+		tpm_dict = {
+                      'image': '',
+                      'title': 'No tenemos resultados'
+                 }
+		return tpm_dict
 
 
 def maybe_download_and_extract():
@@ -191,23 +205,6 @@ def message(sid, data):
     human = run_inference_on_image(data)
     print(str(human))
     return str(human)
-#   r = rq.get('http://en-senas.org/words?tag=' + djangotext)
-#    if(r.status_code == 200):
-#        dictionary = json.loads(r.text)
-#        print(dictionary)
-#        if(dictionary['count'] == 0):
-#            tpm_dict = {
-#                'image': '',
-#                'title': 'No tenemos resultados'
-#            }
-#            dictionary['results'].append(tpm_dict)
-#        return str(dictionary['results'][0]), 123
-#    else:
-#        tpm_dict = {
-#                  'image': '',
-#                  'title': 'No tenemos resultados'
-#              }
-#        return str(tpm_dict), 123
 
 @sio.on('disconnect')
 def disconnect(sid):
