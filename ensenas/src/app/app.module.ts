@@ -4,7 +4,6 @@ import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EnsenasPage } from '../pages/ensenas/ensenas';
 
-
 @NgModule({
   declarations: [
     MyApp,

@@ -1,13 +1,13 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "en-senas",
+  "author": "ssvargass",
+  "homepage": "http://en-senas.org/",
   "private": true,
   "scripts": {
     "build": "ionic-app-scripts build",
     "watch": "ionic-app-scripts watch",
     "serve:before": "watch",
-    "emulate:before": "watch",
+    "emulate:before": "build",
     "deploy:before": "build",
     "build:before": "build",
     "run:before": "build"

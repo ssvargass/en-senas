@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
-
 import { TabsPage } from '../pages/tabs/tabs';
 
+/// <reference path="../../typings/globals/socket.io-client/index.d.ts" />
 
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
